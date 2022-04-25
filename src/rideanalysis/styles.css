@@ -1,0 +1,106 @@
+body {
+/*   font-family: 'Poppins', sans-serif; */
+  font-family: sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin: 0;
+  overflow: hidden;
+}
+
+pre {
+  font-size: 5em;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+#content, .flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.m5 {
+  margin: 5px;
+}
+
+.p5 {
+  padding: 5px;
+}
+
+#controls,
+#svgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#controls {
+  width: 200px;
+}
+
+.marks .land {
+  fill: #009637;
+  /*   stroke: #8B4513; */
+  stroke-width: 1px;
+}
+
+.marks .ride {
+  fill: none;
+  stroke: #137B80;
+  stroke-width: 2px;
+}
+
+.marks path {
+  fill: none;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.marks .globe {
+  fill: #005EB8;
+  stroke: grey;
+  stroke-width: 1px;
+}
+
+.marks .graticules {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1px;
+}
+
+.tick line {
+  stroke: #C0C0BB;
+}
+
+.dropdown,
+.dropdowns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.Dropdown-placeholder {
+  font-size: 0.8em;
+}
+
+.Dropdown-control {
+  padding: 5px 30px 5px 5px;
+}
+
+.Dropdown-option {
+  padding: 5px;
+}
+
+.Dropdown-menu {
+  max-height: auto;
+  font-size: 0.8em;
+}
