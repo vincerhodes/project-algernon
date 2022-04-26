@@ -11,9 +11,9 @@ const fitParser = new FitParser({
 });
 
 export const readFit = (e) => {
-  e.preventDefault();
+  // e.preventDefault();
   var result = '';
-  fitParser.parse(e.target.result, function (error, data) {
+  fitParser.parse(e, function (error, data) {
     // Handle result of parse method
     if (error) {
       console.log(error);
@@ -29,3 +29,19 @@ export const readFile = (file, onLoadCallback) => {
   reader.onload = onLoadCallback;
   reader.readAsArrayBuffer(file);
 }
+
+export const readFileMultiple = (e) => {
+  e.preventDefault();
+  //Get the files
+  let file = [...e.target.files] || [];
+
+  file.forEach((item, index) => {
+    let reader = new FileReader();
+
+    reader.onloadend = () => {
+      console.log(readFit(reader.result));
+    };
+    reader.readAsArrayBuffer(file[index]);
+  });
+
+};

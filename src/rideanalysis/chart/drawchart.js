@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { AxisBottom, AxisLeft } from './axes';
-import { Marks, printline } from './marks';
+import { Marks } from './marks';
 import { Gradient } from './gradient';
 
 const d3 = require('d3')
@@ -13,14 +13,13 @@ const margin = {
   bottom: 40,
   left: 60,
 };
-const xAxisLabelOffset = 45;
+// const xAxisLabelOffset = 45;
 const yAxisLabelOffset = 45;
 const xTextOffset = 20;
 const yTextOffset = 10;
 
 const xAxisTickFormat = timeFormat('%H:%M');
 const labelFormat = timeFormat('%H:%M:%S');
-const xAxisLabel = 'Time';
 
 const yTickCount = 5;
 
@@ -48,6 +47,7 @@ export const DrawChart = ({
   sampleWindow === 1
     ? samples.map((d) => {
         d[samplelabel] = d[attribute];
+        return null;
       })
     : samples.map((d, i) => {
         const start = Math.max(
@@ -66,6 +66,7 @@ export const DrawChart = ({
         );
         // fix NaNs
         d[samplelabel] = d[samplelabel] ? d[samplelabel] : 0;
+        return null;
       });
 
   const xValue = (d) => d.timestamp;

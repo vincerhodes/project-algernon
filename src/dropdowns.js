@@ -1,5 +1,5 @@
 
-import { Container, Dropdown } from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 import { DropdownButton } from 'react-bootstrap';
 
 export const ParameterDropdown = ({ title, values, onSelect }) => (

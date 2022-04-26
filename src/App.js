@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import React, { useState } from 'react';
 
 import { ParameterDropdown } from './dropdowns';
-import { readFit, readFile } from './rideanalysis/readfit';
+import { readFit, readFile, readFileMultiple  } from './rideanalysis/readfit';
 import RideAnalysis from './rideanalysis/index'
 
 // overall dimensions
@@ -62,7 +62,8 @@ function App() {
   }
   return (
     <div >
-      <input type="file" onChange={ e => readFile(e.target.files[0], e => setData(readFit(e))) } />
+      <input type="file" onChange={ e => readFile(e.target.files[0], e => setData(readFit(e.target.result))) } />
+      <input type="file" onChange={ e => readFileMultiple(e) } multiple />
       <Dropdowns />
       <RideAnalysis 
         data={data}
