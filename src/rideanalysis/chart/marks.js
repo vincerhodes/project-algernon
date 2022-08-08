@@ -1,5 +1,5 @@
-const d3 = require('d3')
-const { line } = d3
+const d3 = require("d3");
+const { line } = d3;
 
 export const Marks = ({
   data,
@@ -10,13 +10,12 @@ export const Marks = ({
   radius,
   labelFormat,
 }) => (
-  <g className="marks">
+  <g className='marks'>
     <path
       d={line()
         .x((d) => xScale(xValue(d)))
-        .y((d) => yScale(yValue(d)))(data)
-        }
-      stroke="url(#svgGradient)"
+        .y((d) => yScale(yValue(d)))(data)}
+      stroke='url(#svgGradient)'
     />
   </g>
 );

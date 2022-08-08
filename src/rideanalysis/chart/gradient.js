@@ -1,41 +1,35 @@
 export const Gradient = () => (
   <defs>
-    <linearGradient
-      id="svgGradient"
-      y1="0%"
-      y2="100%"
-      x1="0%"
-      x2="0%"
-    >
+    <linearGradient id='svgGradient' y1='0%' y2='100%' x1='0%' x2='0%'>
       <stop
-        className="start"
-        offset="0%"
-        stopColor="#ffaaaa"
-        stopOpacity="1"
+        className='start'
+        offset='0%'
+        stopColor='#ffaaaa'
+        stopOpacity='1'
       ></stop>
       <stop
-        className="s1"
-        offset="25%"
-        stopColor="#fc8d59"
-        stopOpacity="1"
+        className='s1'
+        offset='25%'
+        stopColor='#fc8d59'
+        stopOpacity='1'
       ></stop>
       <stop
-        className="s2"
-        offset="50%"
-        stopColor="#ffffbf"
-        stopOpacity="1"
+        className='s2'
+        offset='50%'
+        stopColor='#ffffbf'
+        stopOpacity='1'
       ></stop>
       <stop
-        className="s3"
-        offset="75%"
-        stopColor="#91bfdb"
-        stopOpacity="1"
+        className='s3'
+        offset='75%'
+        stopColor='#91bfdb'
+        stopOpacity='1'
       ></stop>
       <stop
-        className="end"
-        offset="100%"
-        stopColor="#aaaaff"
-        stopOpacity="1"
+        className='end'
+        offset='100%'
+        stopColor='#aaaaff'
+        stopOpacity='1'
       ></stop>
     </linearGradient>
   </defs>
